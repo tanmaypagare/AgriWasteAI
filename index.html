@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5ec">
+  <title>ReHarvest — Find value in agricultural waste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="ReHarvest home"><span class="brand-mark">r<span>✳</span></span><span>reharvest</span></a>
+    <div class="top-note"><span class="live-dot"></span> A small step toward zero waste</div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>THE CIRCULAR FARM</span><i></i><span>ISSUE 01</span></div>
+        <h1>Waste is just<br>value <em>waiting</em><br>to be found.</h1>
+        <p class="hero-text">Show us what’s left after the harvest. We’ll help you discover what it could become.</p>
+        <div class="hero-foot"><span class="arrow-down">↘</span><span>SCROLL TO START</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a growing plant">
+        <div class="sun"></div><div class="art-caption">EVERY HARVEST<br>HAS A NEXT CHAPTER</div>
+        <svg class="plant" viewBox="0 0 430 460" fill="none" aria-hidden="true">
+          <path d="M213 445C211 363 218 280 212 188C210 153 215 120 229 86" stroke="#344F37" stroke-width="7" stroke-linecap="round"/>
+          <path d="M212 313C164 301 122 273 91 234" stroke="#344F37" stroke-width="6" stroke-linecap="round"/>
+          <path d="M217 251C261 241 302 213 328 177" stroke="#344F37" stroke-width="6" stroke-linecap="round"/>
+          <path d="M213 365C258 351 293 328 320 295" stroke="#344F37" stroke-width="6" stroke-linecap="round"/>
+          <path d="M210 170C174 131 131 125 102 145C131 181 171 193 210 170Z" fill="#7E9A68"/>
+          <path d="M218 225C253 179 296 170 329 190C302 230 263 246 218 225Z" fill="#A4B486"/>
+          <path d="M209 307C171 260 127 250 96 271C127 312 169 326 209 307Z" fill="#9CAC7B"/>
+          <path d="M217 344C251 306 289 296 317 314C289 351 253 364 217 344Z" fill="#738E60"/>
+          <path d="M227 111C192 74 195 35 224 10C253 41 253 79 227 111Z" fill="#D8A45D"/>
+          <path d="M57 445H365" stroke="#A9A893" stroke-width="2"/>
+          <path d="M176 442L162 378M243 442L261 389M195 444L189 400M228 444L237 405" stroke="#A9A893" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="82" cy="105" r="4" fill="#D8A45D"/><circle cx="349" cy="266" r="5" fill="#D8A45D"/><circle cx="127" cy="344" r="3" fill="#D8A45D"/>
+        </svg>
+        <div class="art-stamp">GROWN<br>AGAIN <span>↗</span></div>
+      </div>
+      <div class="hero-index">01 <span>/</span> 03</div>
+    </section>
+
+    <section class="workspace" id="start">
+      <div class="section-heading">
+        <div><div class="eyebrow dark"><span>LET’S GET STARTED</span><i></i><span>01 — ANALYZE</span></div><h2>What’s in your field?</h2></div>
+        <p>Upload a clear photo of your agricultural waste. We’ll pair it with ideas for its next life.</p>
+      </div>
+
+      <div class="work-grid">
+        <div class="upload-column">
+          <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose an image of agricultural waste">
+            <input id="file-input" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+            <div class="upload-content" id="upload-content">
+              <div class="upload-icon"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 21V5m0 0L9.5 11.5M16 5l6.5 6.5M6 20v5a2 2 0 002 2h16a2 2 0 002-2v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="upload-title">Drop your image here</div><div class="upload-subtitle">or <button class="browse-button" id="browse-button" type="button">browse files</button></div>
+              <div class="file-hint">JPG, PNG OR WEBP <span>·</span> MAX 10 MB</div>
+            </div>
+            <div class="preview-wrap" id="preview-wrap" hidden><img id="preview-image" alt="Selected agricultural waste"><button id="remove-image" class="remove-image" type="button" aria-label="Remove image">×</button><div class="preview-label"><span class="live-dot"></span><span id="file-name">Image ready</span></div></div>
+          </div>
+          <div class="upload-tip"><span>✳</span><p>For best results, photograph the waste in natural light against a simple background.</p></div>
+        </div>
+
+        <div class="identify-column">
+          <div class="step-label"><span class="step-number">1</span><span>AI IMAGE ANALYSIS</span></div>
+          <p class="identify-intro">Upload a photo and let the model identify the waste and suggest what it could become.</p>
+          <div class="analysis-note"><span class="analysis-spark">✳</span><span>Supports rice husk, corn husk, banana husk, coconut waste, and sugarcane bagasse.</span></div>
+          <button class="discover-button" id="discover-button" type="button" disabled><span>Discover its potential</span><span class="button-arrow">↗</span></button>
+          <p class="privacy-note"><span>◎</span> Your image is sent securely to the AI provider for analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="results" id="results" hidden>
+      <div class="results-top"><div><div class="eyebrow dark"><span>THE NEXT CHAPTER</span><i></i><span>02 — POSSIBILITIES</span></div><h2 id="result-title">A new life for your material.</h2></div><button class="start-over" id="start-over" type="button">← Start over</button></div>
+      <div class="result-intro"><span class="result-material-icon" id="result-icon"></span><div><div class="result-kicker">MODEL IDENTIFIED</div><div class="result-material" id="result-material"></div><div class="confidence" id="confidence"></div></div><p id="result-description"></p></div>
+      <div class="ideas-grid" id="ideas-grid"></div>
+      <div class="results-foot"><span>IDEAS FOR A MORE CIRCULAR FUTURE</span><span>REHARVEST <b>✳</b></span></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#top"><span class="brand-mark">r<span>✳</span></span><span>reharvest</span></a><span>GOOD THINGS GROW FROM WHAT’S LEFT.</span><span>© 2026 REHARVEST</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
